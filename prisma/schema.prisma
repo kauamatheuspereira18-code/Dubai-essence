@@ -1,0 +1,12 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+
+model User { id String @id @default(cuid()) name String email String? @unique phone String? passwordHash String? role Role @default(CUSTOMER) createdAt DateTime @default(now()) orders Order[] reviews Review[] favorites Favorite[] }
+model Product { id String @id @default(cuid()) slug String @unique name String brand String gender Gender volume String price Decimal pixPrice Decimal stock Int description String family String longevity String projection String occasions String[] topNotes String[] heartNotes String[] baseNotes String[] images String[] featured Boolean @default(false) bestSeller Boolean @default(false) launch Boolean @default(false) reviews Review[] orderItems OrderItem[] favorites Favorite[] createdAt DateTime @default(now()) }
+model Review { id String @id @default(cuid()) rating Int comment String author String productId String product Product @relation(fields:[productId], references:[id]) userId String? user User? @relation(fields:[userId], references:[id]) createdAt DateTime @default(now()) }
+model Order { id String @id @default(cuid()) userId String? user User? @relation(fields:[userId], references:[id]) total Decimal status OrderStatus @default(PENDING) customerName String customerPhone String items OrderItem[] createdAt DateTime @default(now()) }
+model OrderItem { id String @id @default(cuid()) orderId String order Order @relation(fields:[orderId], references:[id]) productId String product Product @relation(fields:[productId], references:[id]) quantity Int price Decimal }
+model Favorite { id String @id @default(cuid()) userId String user User @relation(fields:[userId], references:[id]) productId String product Product @relation(fields:[productId], references:[id]) @@unique([userId, productId]) }
+enum Role { CUSTOMER ADMIN }
+enum Gender { MASCULINO FEMININO UNISSEX }
+enum OrderStatus { PENDING CONTACTED PAID SHIPPED DELIVERED CANCELED }

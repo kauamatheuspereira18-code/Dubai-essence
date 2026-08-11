@@ -1,0 +1,1 @@
+import { CartClient } from '@/components/CartClient';export const metadata={title:'Carrinho'};export default function Carrinho(){return <section className="mx-auto max-w-7xl px-4 py-14"><h1 className="mb-8 font-serif text-5xl">Carrinho</h1><CartClient/></section>}

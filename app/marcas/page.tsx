@@ -1,0 +1,3 @@
+import Link from 'next/link';import { brands, products } from '@/lib/products';
+export const metadata={title:'Marcas'};
+export default function Marcas(){return <section className="mx-auto max-w-7xl px-4 py-14"><h1 className="font-serif text-5xl">Marcas</h1><p className="mt-3 text-coffee/70">Curadoria da Dubai Essence com casas árabes e linhas premium.</p><div className="mt-10 grid gap-5 md:grid-cols-3">{brands.map(b=><Link id={b} href={`/loja?marca=${encodeURIComponent(b)}`} key={b} className="lux-card rounded-[2rem] p-8"><p className="text-xs uppercase tracking-[.24em] text-oldgold">Marca</p><h2 className="mt-2 font-serif text-3xl">{b}</h2><p className="mt-3 text-coffee/60">{products.filter(p=>p.brand===b).length} perfume(s) no catálogo.</p></Link>)}</div></section>}
