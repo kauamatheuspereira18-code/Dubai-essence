@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/cadastro/page": "/cadastro",
+  "/carrinho/page": "/carrinho",
+  "/checkout/page": "/checkout",
+  "/contato/page": "/contato",
+  "/faq/page": "/faq",
+  "/favoritos/page": "/favoritos",
+  "/login/page": "/login",
+  "/loja/page": "/loja",
+  "/marcas/page": "/marcas",
+  "/minha-conta/page": "/minha-conta",
+  "/page": "/",
+  "/pedidos/page": "/pedidos",
+  "/politica-de-privacidade/page": "/politica-de-privacidade",
+  "/politica-de-troca/page": "/politica-de-troca",
+  "/produto/[slug]/page": "/produto/[slug]",
+  "/sobre/page": "/sobre",
+  "/termos-de-uso/page": "/termos-de-uso"
+}

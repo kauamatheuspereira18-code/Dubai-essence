@@ -1,0 +1,3 @@
+module.exports=[66188,a=>{"use strict";var b=a.i(7997),c=a.i(95936);a.s(["default",0,function(){return(0,b.jsx)("section",{className:"mx-auto max-w-4xl px-4 py-20 text-center",children:(0,b.jsxs)("div",{className:"lux-card rounded-[2rem] p-12",children:[(0,b.jsx)("p",{className:"gold-text font-serif text-8xl",children:"404"}),(0,b.jsx)("h1",{className:"mt-4 font-serif text-4xl",children:"Essa fragrância se perdeu no deserto."}),(0,b.jsx)("p",{className:"mt-3 text-coffee/70",children:"A página que você procura não foi encontrada."}),(0,b.jsx)(c.default,{href:"/loja",className:"btn-gold mt-8 inline-block rounded-full px-7 py-4",children:"Voltar para a loja"})]})})}])},2894,function(a){a.n(a.i(66188))}];
+
+//# sourceMappingURL=app_not-found_tsx_1gi3i27._.js.map

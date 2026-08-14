@@ -1,0 +1,20 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/44p_g4s4p6ckz.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+7:I[97367,["/_next/static/chunks/44p_g4s4p6ckz.js"],"ViewportBoundary"]
+8:I[97367,["/_next/static/chunks/44p_g4s4p6ckz.js"],"MetadataBoundary"]
+9:I[27201,["/_next/static/chunks/44p_g4s4p6ckz.js"],"IconMark"]
+b:I[39756,["/_next/static/chunks/44p_g4s4p6ckz.js"],"default"]
+c:I[37457,["/_next/static/chunks/44p_g4s4p6ckz.js"],"default"]
+6:X
+e:X
+e:C
+0:{"buildId":"0Ab7sDlJwpZlxvcLzNJ0S","data":[{"rsc":["$","$1","c",{"children":[["$","section",null,{"className":"mx-auto max-w-5xl px-4 py-14","children":["$","div",null,{"className":"lux-card rounded-[2rem] p-8 md:p-12","children":[["$","p",null,{"className":"text-xs uppercase tracking-[.24em] text-oldgold","children":"Dubai Essence"}],["$","h1",null,{"className":"font-serif text-5xl","children":"Perfumes árabes originais, exclusivos e marcantes."}],["$","p",null,{"className":"mt-6 text-lg leading-8 text-coffee/75","children":"A Dubai Essence nasceu para aproximar clientes de fragrâncias árabes com alto padrão de apresentação, fixação e sofisticação. Nossa proposta une curadoria, atendimento próximo e experiência premium, valorizando perfumes orientais, florais, gourmand, amadeirados e unissex."}],["$","div",null,{"className":"mt-8 grid gap-4 md:grid-cols-3","children":[["$","div",null,{"className":"rounded-2xl bg-white p-5","children":[["$","b",null,{"className":"text-oldgold","children":"Luxo"}],["$","p",null,{"className":"mt-2 text-sm text-coffee/70","children":"Identidade clássica em bege claro e dourado."}]]}],["$","div",null,{"className":"rounded-2xl bg-white p-5","children":[["$","b",null,{"className":"text-oldgold","children":"Confiança"}],["$","p",null,{"className":"mt-2 text-sm text-coffee/70","children":"Atendimento direto pelo WhatsApp oficial."}]]}],["$","div",null,{"className":"rounded-2xl bg-white p-5","children":[["$","b",null,{"className":"text-oldgold","children":"Curadoria"}],["$","p",null,{"className":"mt-2 text-sm text-coffee/70","children":"Catálogo focado exclusivamente em perfumes árabes."}]]}]]}]]}]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":"$@5","staleTime":"$6","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L7",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L8",null,{"children":["$","$3",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Sobre | Dubai Essence"}],["$","meta","1",{"name":"description","content":"Loja premium de perfumes árabes originais. Fragrâncias exclusivas e marcantes em SJP, CWB e Itapoá SC."}],["$","meta","2",{"property":"og:title","content":"Dubai Essence"}],["$","meta","3",{"property":"og:description","content":"Perfumes árabes originais com elegância e sofisticação."}],["$","meta","4",{"property":"og:image","content":"http://localhost:3000/logo.png"}],["$","meta","5",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","6",{"name":"twitter:title","content":"Dubai Essence"}],["$","meta","7",{"name":"twitter:description","content":"Perfumes árabes originais com elegância e sofisticação."}],["$","meta","8",{"name":"twitter:image","content":"http://localhost:3000/logo.png"}],["$","link","9",{"rel":"icon","href":"/logo.png"}],["$","$L9","10",{}]]}]}]}],null]}],"isPartial":"$@a","staleTime":"$6","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Lb",null,{"parallelRouterKey":"children","template":["$","$Lc",null,{}]}]]}],"isPartial":"$@d","staleTime":"$6","varyParams":"$e"}],"isUpgradeableISRFallback":false,"a":"$@f","rootVaryParams":null,"needsRuntimeRequest":"$@10"}
+4:null
+10:true
+6:300
+6:C
+f:0
+a:"$undefined"
+d:"$undefined"
+5:"$undefined"
