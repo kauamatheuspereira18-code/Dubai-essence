@@ -1,127 +1,2103 @@
 export type Product = {
-  slug:string; name:string; brand:string; gender:'Masculino'|'Feminino'|'Unissex'; volume:string; price:number; pixPrice:number; oldPrice?:number; stock:number; family:string; longevity:string; projection:string; occasions:string[]; topNotes:string[]; heartNotes:string[]; baseNotes:string[]; description:string; tags:string[]; featured?:boolean; bestSeller?:boolean; launch?:boolean; colors:[string,string,string]; rating:number; reviews:number; images?: string[];
+  slug:string; name:string; brand:string; gender:'Masculino'|'Feminino'|'Unissex'; volume:string; price:number; oldPrice?:number; stock:number | null; description:string; family:string; longevity:string; projection:string; occasions:string[]; topNotes:string[]; heartNotes:string[]; baseNotes:string[]; tags:string[]; featured?:boolean; bestSeller?:boolean; launch?:boolean; colors:[string,string,string]; rating:number; reviews:number; images?: string[];
 };
 export const whatsappNumber='5541997095511';
-const allProducts: Product[] = [
-{slug:'lattafa-asad-bourbon',name:'Asad Bourbon',brand:'Lattafa',gender:'Masculino',volume:'100 ml',price:249.90,pixPrice:224.91,stock:7,family:'Oriental especiado ambarado',longevity:'Alta fixação',projection:'Intensa nas primeiras horas',occasions:['Noite','Eventos','Clima frio'],topNotes:['Pimenta rosa','Lavanda','Mirra'],heartNotes:['Cacau','Noz-moscada','Davana'],baseNotes:['Baunilha bourbon','Âmbar','Vetiver'],description:'Uma fragrância imponente, quente e envolvente, construída para quem gosta de presença elegante. O dulçor ambarado encontra especiarias secas e um fundo cremoso que deixa assinatura marcante sem perder sofisticação.',tags:['Lançamento','Intenso'],featured:true,bestSeller:true,launch:true,colors:['#2b160f','#b98238','#f2d9a0'],rating:4.9,reviews:38},
-{slug:'lattafa-khamrah',name:'Khamrah',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:289.90,pixPrice:260.91,stock:9,family:'Oriental gourmand',longevity:'Muito alta',projection:'Marcante',occasions:['Encontros','Noite','Inverno'],topNotes:['Canela','Noz-moscada','Bergamota'],heartNotes:['Tâmara','Pralinê','Tuberosa'],baseNotes:['Baunilha','Fava tonka','Madeiras doces'],description:'Gourmand luxuoso de perfil cremoso e especiado. Abre luminoso, evolui para um coração adocicado e termina com uma base quente, viciante e confortável.',tags:['Mais vendido','Gourmand'],featured:true,bestSeller:true,colors:['#4a160f','#c99a45','#f6dfb9'],rating:4.9,reviews:72},
-{slug:'lattafa-yara',name:'Yara',brand:'Lattafa',gender:'Feminino',volume:'100 ml',price:229.90,pixPrice:206.91,stock:12,family:'Floral frutado cremoso',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia a dia','Encontros','Primavera'],topNotes:['Tangerina','Orquídea','Heliotrópio'],heartNotes:['Frutas tropicais','Acorde gourmand'],baseNotes:['Baunilha','Almíscar','Sândalo'],description:'Delicada, feminina e envolvente. Combina frutas macias, nuances florais e uma cremosidade baunilhada muito confortável.',tags:['Feminino','Doce'],featured:true,bestSeller:true,colors:['#e9b6b8','#c69a3d','#fff2df'],rating:4.8,reviews:95},
-{slug:'lattafa-eclaire',name:'Eclaire',brand:'Lattafa',gender:'Feminino',volume:'100 ml',price:299.90,pixPrice:269.91,stock:5,family:'Gourmand lactônico',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Encontros','Noite','Momentos especiais'],topNotes:['Caramelo','Leite','Açúcar'],heartNotes:['Mel','Flores brancas'],baseNotes:['Baunilha','Pralinê','Almíscar'],description:'Perfume doce e sofisticado, com sensação cremosa de sobremesa fina. Ideal para quem busca uma assinatura macia, elegante e extremamente aconchegante.',tags:['Gourmand','Premium'],launch:true,featured:true,colors:['#e6c2a0','#b5813d','#fff6e8'],rating:4.9,reviews:41},
-{slug:'lattafa-opulent-dubai',name:'Opulent Dubai',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:199.90,pixPrice:170.10,oldPrice:219.90,stock:11,family:'Oriental floral',longevity:'Boa fixação',projection:'Moderada',occasions:['Trabalho','Jantar','Uso versátil'],topNotes:['Açafrão','Cítricos','Notas verdes'],heartNotes:['Rosa','Jasmim','Âmbar'],baseNotes:['Oud suave','Madeira seca','Almíscar'],description:'Um oriental elegante com facetas florais e madeiras limpas. Versátil, refinado e com DNA árabe perceptível sem exageros.',tags:['Promoção','Unissex'],bestSeller:true,colors:['#fff2df','#c69a3d','#6e4b22'],rating:4.7,reviews:27},
-{slug:'lattafa-fakhar-platin',name:'Fakhar Platin',brand:'Lattafa',gender:'Masculino',volume:'100 ml',price:239.90,pixPrice:215.91,stock:6,family:'Amadeirado aromático',longevity:'Boa fixação',projection:'Moderada a alta',occasions:['Trabalho','Dia a dia','Eventos'],topNotes:['Bergamota','Pimenta rosa','Cardamomo'],heartNotes:['Lavanda','Gerânio','Sálvia'],baseNotes:['Âmbar','Cedro','Patchouli'],description:'Aromático masculino com abertura fresca e coração elegante. O fundo amadeirado entrega presença limpa, moderna e sofisticada.',tags:['Masculino','Elegante'],colors:['#c8c4ba','#7a756d','#f4eddc'],rating:4.6,reviews:18},
-{slug:'bidaya-maktub-la-vie',name:'Maktub La Vie',brand:'Bidaya',gender:'Feminino',volume:'100 ml',price:269.00,pixPrice:224.10,oldPrice:289.00,stock:8,family:'Frutado floral',longevity:'Alta fixação',projection:'Moderada',occasions:['Dia','Encontros','Verão'],topNotes:['Pera','Frutas vermelhas','Bergamota'],heartNotes:['Íris','Jasmim','Flor de laranjeira'],baseNotes:['Baunilha','Pralinê','Almíscar branco'],description:'Frutado feminino radiante, com doçura refinada e acabamento macio. Uma escolha alegre, elegante e fácil de elogiar.',tags:['Frutado','Promoção'],launch:true,colors:['#d4a568','#f0dec4','#674019'],rating:4.8,reviews:22},
-{slug:'bidaya-habibi-king',name:'Habibi King',brand:'Bidaya',gender:'Masculino',volume:'100 ml',price:269.00,pixPrice:224.10,oldPrice:289.00,stock:4,family:'Oriental especiado',longevity:'Alta fixação',projection:'Intensa',occasions:['Noite','Balada','Eventos'],topNotes:['Maçã','Pimenta','Cítricos'],heartNotes:['Canela','Lavanda','Incenso'],baseNotes:['Âmbar','Couro','Madeiras'],description:'Perfume de presença real, masculino e quente. Traz especiarias, madeiras e toque adocicado para uma assinatura poderosa.',tags:['Intenso','Masculino'],colors:['#11100f','#c69a3d','#51331e'],rating:4.7,reviews:31},
-{slug:'bidaya-gris',name:'Gris',brand:'Bidaya Parfums',gender:'Unissex',volume:'100 ml',price:299.00,pixPrice:269.10,stock:3,family:'Aromático ambarado',longevity:'Alta fixação',projection:'Elegante',occasions:['Trabalho','Eventos formais','Noite'],topNotes:['Cardamomo','Bergamota','Pimenta'],heartNotes:['Íris','Lavanda','Âmbar cinza'],baseNotes:['Sândalo','Vetiver','Almíscar'],description:'Refinado, seco e sofisticado. Gris privilegia uma aura aromática elegante com textura aveludada e fundo ambarado discreto.',tags:['Premium','Unissex'],colors:['#b8b2aa','#4c4a47','#ead9b2'],rating:4.8,reviews:16},
-{slug:'rayhaan-elixir',name:'Elixir',brand:'Rayhaan',gender:'Unissex',volume:'100 ml',price:289.00,pixPrice:224.10,oldPrice:319.00,stock:6,family:'Oriental ambarado',longevity:'Muito alta',projection:'Intensa',occasions:['Noite','Festas','Ocasiões marcantes'],topNotes:['Açafrão','Pimenta preta','Cítricos'],heartNotes:['Resinas','Rosa escura','Canela'],baseNotes:['Oud','Âmbar','Baunilha escura'],description:'Elixir denso, quente e magnético. Ideal para quem deseja um perfume com assinatura árabe luxuosa, misteriosa e duradoura.',tags:['Promoção','Oud'],colors:['#090909','#b88a32','#3c1910'],rating:4.7,reviews:25},
-{slug:'armaf-club-de-nuit-untold',name:'Club de Nuit Untold',brand:'Armaf',gender:'Unissex',volume:'105 ml',price:399.90,pixPrice:359.91,stock:4,family:'Âmbar floral',longevity:'Muito alta',projection:'Explosiva',occasions:['Eventos','Noite','Assinatura pessoal'],topNotes:['Açafrão','Jasmim'],heartNotes:['Âmbar cinza','Madeira âmbar'],baseNotes:['Resina de abeto','Cedro'],description:'Fragrância luxuosa e radiante, com mistura de açafrão, âmbar e madeiras cristalinas. Projeta elegância contemporânea e alto impacto.',tags:['Luxo','Unissex'],featured:true,bestSeller:true,colors:['#241923','#c69a3d','#efe0c1'],rating:4.9,reviews:64},
-{slug:'al-wataniah-sabah-al-ward',name:'Sabah Al Ward',brand:'Al Wataniah',gender:'Feminino',volume:'100 ml',price:189.90,pixPrice:170.91,stock:10,family:'Floral oriental',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia a dia','Primavera','Presentes'],topNotes:['Rosa','Pimenta rosa','Mandarina'],heartNotes:['Flor de laranjeira','Cacau','Jasmim'],baseNotes:['Baunilha','Patchouli','Almíscar'],description:'Floral feminino com toque oriental e textura delicada. Une frescor rosado a base cremosa para uma sensação elegante e acolhedora.',tags:['Floral','Feminino'],colors:['#bd3b48','#f0c3b5','#c69a3d'],rating:4.6,reviews:29},
-{slug:'lattafa-asad-zanzibar',name:'Asad Zanzibar',brand:'Lattafa',gender:'Masculino',volume:'100 ml',price:249.90,pixPrice:224.91,stock:6,family:'Aromático aquático cremoso',longevity:'Boa fixação',projection:'Moderada a alta',occasions:['Verão','Dia','Encontros'],topNotes:['Pimenta preta','Lavanda marinha'],heartNotes:['Água de coco','Íris','Sal'],baseNotes:['Baunilha','Incenso','Madeiras'],description:'Versão tropical e elegante da linha Asad, com contraste entre especiarias, acorde marinho e cremosidade de coco. Uma assinatura fresca, diferente e com toque oriental.',tags:['Instagram','Masculino'],launch:true,colors:['#6b3b22','#67b8c9','#efe0c2'],rating:4.7,reviews:19},
-{slug:'lattafa-teriaq',name:'Teriaq',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:329.90,pixPrice:296.91,stock:5,family:'Couro gourmand especiado',longevity:'Alta fixação',projection:'Marcante',occasions:['Noite','Eventos','Clima frio'],topNotes:['Caramelo','Amêndoa amarga','Pimenta rosa','Damasco'],heartNotes:['Mel','Rosa','Ruibarbo','Flores brancas'],baseNotes:['Baunilha','Couro','Almíscar','Vetiver','Ládano'],description:'Teriaq combina doçura sofisticada, couro macio e especiarias. É envolvente, moderno e com uma evolução rica entre gourmand, floral e fundo sensual.',tags:['Instagram','Premium'],launch:true,featured:true,colors:['#c9ad86','#8a5e37','#f8ead2'],rating:4.9,reviews:44},
-{slug:'lattafa-angham',name:'Angham',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:299.90,pixPrice:269.91,stock:7,family:'Baunilha aromática gourmand',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Dia a dia','Encontros','Noite'],topNotes:['Gengibre','Mandarina','Pimenta rosa'],heartNotes:['Lavanda','Pralinê','Cacau'],baseNotes:['Baunilha','Âmbar','Almíscar'],description:'Angham é cremoso, elegante e confortável. A baunilha aparece de forma refinada, equilibrada por especiarias luminosas, lavanda e nuances gourmand.',tags:['Instagram','Baunilha'],featured:true,colors:['#e5d1a9','#c69a3d','#fff5df'],rating:4.8,reviews:36},
-{slug:'lattafa-yara-candy',name:'Yara Candy',brand:'Lattafa',gender:'Feminino',volume:'100 ml',price:249.90,pixPrice:224.91,stock:8,family:'Frutado gourmand doce',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia','Encontros','Primavera'],topNotes:['Mandarina verde','Groselha preta'],heartNotes:['Morango efervescente','Gardênia'],baseNotes:['Xarope de baunilha','Almíscar','Âmbar','Sândalo'],description:'Uma versão alegre e açucarada da linha Yara, com frutas vibrantes, doçura cremosa e acabamento feminino muito jovial.',tags:['Instagram','Feminino'],launch:true,colors:['#ff6fab','#f7c5dd','#c69a3d'],rating:4.8,reviews:28},
-{slug:'lattafa-atlas',name:'Atlas',brand:'Lattafa',gender:'Unissex',volume:'55 ml',price:279.90,pixPrice:251.91,stock:4,family:'Aquático ambarado salino',longevity:'Alta fixação',projection:'Intensa',occasions:['Verão','Dia','Ocasiões marcantes'],topNotes:['Notas marinhas','Limão','Sal'],heartNotes:['Davana','Íris'],baseNotes:['Âmbar cinza','Sândalo','Musgo de carvalho'],description:'Atlas entrega uma sensação oceânica poderosa, salgada e elegante, com fundo ambarado sofisticado e assinatura extremamente diferente.',tags:['Instagram','Aquático'],colors:['#0756b8','#021f52','#d5a34a'],rating:4.7,reviews:23},
-{slug:'lattafa-badee-al-oud-sublime',name:"Bade'e Al Oud Sublime",brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:239.90,pixPrice:215.91,stock:6,family:'Frutado amadeirado',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Dia','Encontros','Uso versátil'],topNotes:['Maçã','Lichia','Rosa'],heartNotes:['Ameixa','Jasmim'],baseNotes:['Baunilha','Musgo','Patchouli'],description:'Sublime traz frutas vermelhas e maçã com um fundo doce-amadeirado. É vibrante, fácil de usar e com presença agradável.',tags:['Instagram','Frutado'],colors:['#8b151b','#c79a3c','#f4dbc3'],rating:4.7,reviews:33},
-{slug:'lattafa-badee-al-oud-honor-glory',name:"Bade'e Al Oud Honor & Glory",brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:269.90,pixPrice:242.91,stock:7,family:'Gourmand especiado cremoso',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Encontros','Noite','Clima ameno'],topNotes:['Abacaxi','Crème brûlée'],heartNotes:['Canela','Cúrcuma','Pimenta preta','Benjoim'],baseNotes:['Baunilha','Sândalo','Cashmeran','Musgo'],description:'Um gourmand sofisticado com abacaxi caramelizado, especiarias quentes e fundo cremoso. Chamativo, elegante e muito elogiável.',tags:['Instagram','Gourmand'],bestSeller:true,colors:['#f7efe0','#c69a3d','#49311c'],rating:4.9,reviews:52},
-{slug:'lattafa-ajayeb-dubai-portrait',name:'Ajayeb Dubai Portrait',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:219.90,pixPrice:197.91,stock:5,family:'Frutado oriental amadeirado',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia','Noite','Uso versátil'],topNotes:['Laranja','Limão'],heartNotes:['Manga','Osmanthus'],baseNotes:['Oud','Âmbar','Almíscar','Sândalo'],description:'Ajayeb Dubai Portrait mistura frutas luminosas com fundo oriental amadeirado. Tem personalidade exótica, tropical e sofisticada.',tags:['Instagram','Unissex'],colors:['#562075','#c69a3d','#1b111c'],rating:4.6,reviews:21},
-{slug:'lattafa-fakhar-rose',name:'Fakhar Rose',brand:'Lattafa',gender:'Feminino',volume:'100 ml',price:229.90,pixPrice:206.91,stock:9,family:'Floral branco frutado',longevity:'Boa fixação',projection:'Moderada a alta',occasions:['Dia','Trabalho','Eventos'],topNotes:['Frutas','Romã','Aldeídos','Lírio'],heartNotes:['Tuberosa','Jasmim','Gardênia','Ylang-ylang','Madressilva'],baseNotes:['Baunilha','Sândalo','Ambroxan','Almíscar branco'],description:'Fakhar Rose é feminino, elegante e luminoso, com flores brancas cremosas, frutas e fundo macio de baunilha e almíscar.',tags:['Instagram','Floral'],colors:['#f5e1d8','#d6a06b','#fbf7ef'],rating:4.8,reviews:48},
-{slug:'lattafa-qaed-al-fursan',name:'Qaed Al Fursan',brand:'Lattafa',gender:'Masculino',volume:'90 ml',price:189.90,pixPrice:170.91,stock:10,family:'Frutado amadeirado oriental',longevity:'Boa fixação',projection:'Moderada a alta',occasions:['Dia','Noite','Balada'],topNotes:['Abacaxi','Açafrão'],heartNotes:['Jasmim','Bálsamo de abeto'],baseNotes:['Âmbar','Cedro','Oud'],description:'Qaed Al Fursan é conhecido pelo acorde marcante de abacaxi com madeira e âmbar, criando uma presença doce, seca e muito versátil.',tags:['Instagram','Masculino'],bestSeller:true,colors:['#101010','#c69a3d','#3b2714'],rating:4.8,reviews:67},
-{slug:'lattafa-qaed-al-fursan-unlimited',name:'Qaed Al Fursan Unlimited',brand:'Lattafa',gender:'Unissex',volume:'90 ml',price:199.90,pixPrice:179.91,stock:8,family:'Cremoso tropical floral',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia','Verão','Passeios'],topNotes:['Coco','Cítricos','Abacaxi'],heartNotes:['Ylang-ylang','Jasmim','Frangipani'],baseNotes:['Baunilha','Almíscar','Sândalo'],description:'A versão Unlimited traz uma aura branca, cremosa e tropical. É confortável, elegante e perfeita para quem gosta de coco e flores solares.',tags:['Instagram','Tropical'],colors:['#f8f1de','#c69a3d','#f2d9a4'],rating:4.7,reviews:39},
-{slug:'lattafa-khamrah-qahwa',name:'Khamrah Qahwa',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:319.90,pixPrice:287.91,stock:6,family:'Gourmand especiado com café',longevity:'Muito alta',projection:'Marcante',occasions:['Noite','Inverno','Encontros'],topNotes:['Gengibre','Canela','Cardamomo'],heartNotes:['Pralinê','Frutas cristalizadas','Flores brancas'],baseNotes:['Café arábica','Baunilha','Fava tonka','Benjoim','Almíscar'],description:'Khamrah Qahwa adiciona café ao DNA gourmand especiado da linha. É quente, viciante e sofisticado, com excelente presença.',tags:['Instagram','Café'],bestSeller:true,colors:['#40200f','#c68a36','#25140c'],rating:4.9,reviews:58},
-{slug:'lattafa-ana-abiyedh-rouge',name:'Ana Abiyedh Rouge',brand:'Lattafa',gender:'Unissex',volume:'60 ml',price:159.90,pixPrice:143.91,stock:9,family:'Âmbar amadeirado',longevity:'Alta fixação',projection:'Alta',occasions:['Noite','Eventos','Assinatura pessoal'],topNotes:['Açafrão','Amêndoa amarga'],heartNotes:['Jasmim','Cedro'],baseNotes:['Âmbar cinza','Almíscar','Madeiras'],description:'Fragrância radiante e intensa, com açafrão, madeiras e âmbar. Perfil elegante, moderno e de alta projeção.',tags:['Instagram','Unissex'],colors:['#b50f1e','#c69a3d','#fff2e3'],rating:4.7,reviews:42},
-{slug:'lattafa-nebras',name:'Nebras',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:289.90,pixPrice:260.91,stock:5,family:'Gourmand baunilhado',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Encontros','Noite','Clima frio'],topNotes:['Frutas vermelhas','Mandarina'],heartNotes:['Baunilha','Cacau','Rosa'],baseNotes:['Fava tonka','Âmbar','Almíscar','Açúcar'],description:'Nebras é doce, cremoso e elegante, com frutas vermelhas, baunilha e cacau. Uma fragrância gourmand confortável e muito envolvente.',tags:['Instagram','Gourmand'],featured:true,colors:['#4a1414','#c69a3d','#efded1'],rating:4.9,reviews:61},
-{slug:'lattafa-sehr',name:'Sehr',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:319.90,pixPrice:287.91,stock:4,family:'Gourmand ambarado especiado',longevity:'Alta fixação',projection:'Marcante',occasions:['Noite','Eventos','Clima frio'],topNotes:['Amêndoa amarga','Canela'],heartNotes:['Jasmim','Tuberosa'],baseNotes:['Baunilha','Fava tonka','Âmbar','Madeiras'],description:'Sehr tem assinatura densa, doce e sedutora, equilibrando amêndoa, especiarias, flores brancas e base quente.',tags:['Instagram','Premium'],launch:true,colors:['#7a1015','#c69a3d','#2a0f0f'],rating:4.8,reviews:18},
-{slug:'lattafa-al-nashama-caprice',name:'Al Nashama Caprice',brand:'Lattafa',gender:'Masculino',volume:'100 ml',price:249.90,pixPrice:224.91,stock:7,family:'Aromático fresco especiado',longevity:'Boa fixação',projection:'Moderada a alta',occasions:['Trabalho','Dia','Noite'],topNotes:['Bergamota','Gengibre','Cardamomo','Limão verbena'],heartNotes:['Lavanda','Gerânio','Menta'],baseNotes:['Âmbar','Cedro','Patchouli','Vetiver'],description:'Caprice é fresco, aromático e elegante, com especiarias limpas, lavanda e fundo amadeirado moderno.',tags:['Instagram','Masculino'],colors:['#d9c7aa','#1e6091','#c69a3d'],rating:4.7,reviews:30},
-{slug:'lattafa-badee-al-oud-noble-blush',name:"Bade'e Al Oud Noble Blush",brand:'Lattafa',gender:'Feminino',volume:'100 ml',price:279.90,pixPrice:251.91,stock:6,family:'Floral gourmand lactônico',longevity:'Alta fixação',projection:'Moderada',occasions:['Dia','Encontros','Primavera'],topNotes:['Leite de rosa','Amêndoa'],heartNotes:['Merengue','Tuberosa','Flores brancas'],baseNotes:['Baunilha','Sândalo','Almíscar'],description:'Noble Blush é delicado e cremoso, com sensação lactônica, flores brancas e dulçor refinado. Uma fragrância feminina macia e elegante.',tags:['Instagram','Feminino'],launch:true,colors:['#e8b9c1','#c69a3d','#fff2e7'],rating:4.8,reviews:26},
-{slug:'lattafa-rave-now',name:'Rave Now',brand:'Lattafa',gender:'Masculino',volume:'100 ml',price:179.90,pixPrice:161.91,stock:10,family:'Frutado amadeirado',longevity:'Boa fixação',projection:'Moderada a alta',occasions:['Dia','Balada','Uso casual'],topNotes:['Abacaxi','Bergamota','Maçã'],heartNotes:['Jasmim','Patchouli','Bétula'],baseNotes:['Âmbar','Almíscar','Baunilha','Musgo'],description:'Rave Now é vibrante e jovial, com abertura frutada marcante e fundo amadeirado doce. Excelente para quem gosta de perfumes fáceis de elogiar.',tags:['Instagram','Masculino'],colors:['#101010','#c02028','#c69a3d'],rating:4.6,reviews:34},
-{slug:'lattafa-ameer-al-oudh-intense-oud',name:'Ameer Al Oudh Intense Oud',brand:'Lattafa',gender:'Unissex',volume:'100 ml',price:199.90,pixPrice:179.91,stock:8,family:'Oriental amadeirado gourmand',longevity:'Alta fixação',projection:'Intensa',occasions:['Noite','Inverno','Eventos'],topNotes:['Notas amadeiradas','Oud'],heartNotes:['Açúcar','Baunilha'],baseNotes:['Oud','Sândalo','Ervas'],description:'Um oud doce, quente e intenso. Ameer Al Oudh combina madeira escura, baunilha e facetas açucaradas com forte presença oriental.',tags:['Instagram','Oud'],colors:['#7b4b21','#d6a23b','#f3dfbb'],rating:4.8,reviews:50},
-{slug:'lattafa-haya',name:'Haya',brand:'Lattafa',gender:'Feminino',volume:'100 ml',price:229.90,pixPrice:206.91,stock:7,family:'Floral frutado gourmand',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia','Encontros','Primavera'],topNotes:['Champagne','Morango','Tangerina','Laranja sanguínea','Rosa'],heartNotes:['Gardênia','Jasmim','Orquídea baunilha'],baseNotes:['Âmbar','Sândalo','Castanha','Baunilha'],description:'Haya é feminino, delicado e festivo, com frutas, flores cremosas e fundo adocicado elegante.',tags:['Instagram','Feminino'],colors:['#efb5b2','#c69a3d','#fff1de'],rating:4.7,reviews:24},
-{slug:'dior-sauvage-parfum',name:'Sauvage Parfum',brand:'Dior',gender:'Masculino',volume:'100 ml',price:799.90,pixPrice:719.91,stock:2,family:'Ambarado aromático',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Noite','Eventos','Assinatura pessoal'],topNotes:['Bergamota','Mandarina','Elemi'],heartNotes:['Sândalo'],baseNotes:['Olíbano','Fava tonka','Baunilha'],description:'Versão mais densa e refinada do DNA Sauvage, com cítricos elegantes, madeiras cremosas e fundo resinoso ambarado.',tags:['Instagram','Designer','Não árabe'],colors:['#090909','#0d2f55','#b3b7bd'],rating:4.8,reviews:54},
-{slug:'dolce-gabbana-light-blue',name:'Light Blue',brand:'Dolce & Gabbana',gender:'Feminino',volume:'100 ml',price:459.90,pixPrice:413.91,stock:4,family:'Cítrico floral fresco',longevity:'Moderada',projection:'Suave a moderada',occasions:['Dia','Verão','Trabalho'],topNotes:['Limão siciliano','Maçã','Cedro','Campânula'],heartNotes:['Bambu','Jasmim','Rosa branca'],baseNotes:['Cedro','Almíscar','Âmbar'],description:'Clássico fresco e luminoso, com cítricos mediterrâneos, toque floral limpo e fundo confortável. Ideal para dias quentes e uso elegante casual.',tags:['Instagram','Designer','Não árabe'],colors:['#cfe7f6','#ffffff','#9cb5c8'],rating:4.7,reviews:63},
-{slug:'sabrina-carpenter-sweet-tooth',name:'Sweet Tooth',brand:'Sabrina Carpenter',gender:'Feminino',volume:'75 ml',price:279.90,pixPrice:251.91,stock:5,family:'Gourmand doce',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia','Encontros','Momentos descontraídos'],topNotes:['Chocolate','Bergamota','Gengibre'],heartNotes:['Marshmallow','Coco','Jasmim'],baseNotes:['Baunilha de Madagascar','Madeira de cashmere','Chantilly','Almíscar'],description:'Gourmand divertido e confortável, com sensação de sobremesa cremosa, marshmallow e baunilha. Doce sem perder maciez.',tags:['Instagram','Gourmand','Não árabe'],colors:['#f4c7d6','#ffffff','#b58f76'],rating:4.7,reviews:31},
-{slug:'sabrina-carpenter-sweet-tooth-caramel-dream',name:'Sweet Tooth Caramel Dream',brand:'Sabrina Carpenter',gender:'Feminino',volume:'75 ml',price:299.90,pixPrice:269.91,stock:4,family:'Gourmand caramelado',longevity:'Boa fixação',projection:'Moderada',occasions:['Encontros','Noite','Clima ameno'],topNotes:['Leite de amêndoas','Laranja','Limão siciliano'],heartNotes:['Chocolate amargo','Baunilha','Jasmim'],baseNotes:['Caramelo','Patchouli','Sândalo','Almíscar'],description:'Uma leitura mais caramelada e quente do universo Sweet Tooth, com dulçor cremoso, chocolate e fundo levemente amadeirado.',tags:['Instagram','Gourmand','Não árabe'],colors:['#c78752','#f3d0b5','#4b2a18'],rating:4.8,reviews:22},
-{slug:'britney-spears-fantasy',name:'Fantasy',brand:'Britney Spears',gender:'Feminino',volume:'100 ml',price:249.90,pixPrice:224.91,stock:5,family:'Floral frutado gourmand',longevity:'Boa fixação',projection:'Moderada',occasions:['Dia','Festas','Encontros'],topNotes:['Kiwi','Lichia vermelha','Marmelo'],heartNotes:['Chocolate branco','Cupcake','Orquídea','Jasmim'],baseNotes:['Almíscar','Raiz de íris','Madeiras'],description:'Perfume feminino icônico, doce e alegre, combinando frutas exóticas, acorde gourmand e fundo macio.',tags:['Instagram','Não árabe'],colors:['#ff3aa7','#7d2bc2','#c69a3d'],rating:4.7,reviews:69},
-{slug:'givenchy-linterdit-rouge',name:"L'Interdit Rouge",brand:'Givenchy',gender:'Feminino',volume:'80 ml',price:699.90,pixPrice:629.91,stock:2,family:'Floral ambarado especiado',longevity:'Alta fixação',projection:'Marcante',occasions:['Noite','Eventos','Ocasiões especiais'],topNotes:['Gengibre','Laranja sanguínea'],heartNotes:['Tuberosa','Jasmim','Pimenta'],baseNotes:['Sândalo','Patchouli','Vetiver'],description:'Floral branco intenso com especiarias quentes e base amadeirada. Sofisticado, sensual e marcante.',tags:['Instagram','Designer','Não árabe'],colors:['#7b0f14','#111111','#c69a3d'],rating:4.8,reviews:37},
-{slug:'lattafa-his-confession',name:'His Confession',brand:'Lattafa',gender:'Masculino',volume:'100 ml',price:269.90,pixPrice:242.91,stock:6,family:'Oriental amadeirado especiado',longevity:'Alta fixação',projection:'Moderada a alta',occasions:['Noite','Encontros','Clima frio','Eventos'],topNotes:['Canela','Lavanda','Mandarina'],heartNotes:['Íris','Benjoim','Cipreste','Mahonial'],baseNotes:['Baunilha','Fava tonka','Âmbar','Cedro','Incenso','Patchouli'],description:'His Confession é um masculino sofisticado, cremoso e envolvente. A abertura combina canela, lavanda e mandarina; no coração surge uma íris elegante com resinas e nuances verdes; no fundo, baunilha, tonka, âmbar, cedro, incenso e patchouli criam uma assinatura quente, sensual e marcante.',tags:['Instagram','Árabe','Masculino'],featured:true,launch:true,colors:['#090909','#c69a3d','#e9dcc5'],rating:4.8,reviews:32}
-
+export const products: Product[] = [
+  {
+    "slug": "alnoble",
+    "name": "Alnoble",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 220.0,
+    "stock": 2,
+    "family": "Oriental amadeirado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Alnoble é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": true,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/alnoble-1.jpg"
+    ]
+  },
+  {
+    "slug": "ameeri",
+    "name": "Ameeri",
+    "brand": "Surrati",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 160.0,
+    "stock": 1,
+    "family": "Oriental oud",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Ameeri é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental oud e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": true,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/ameeri-1.jpg"
+    ]
+  },
+  {
+    "slug": "amerati",
+    "name": "Amerati",
+    "brand": "Al Wataniah",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 170.0,
+    "stock": 1,
+    "family": "Floral oriental",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Amerati é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": true,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/amerati-1.jpg"
+    ]
+  },
+  {
+    "slug": "animale",
+    "name": "Animale",
+    "brand": "Animale",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 260.0,
+    "stock": 1,
+    "family": "Aromático amadeirado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Bergamota",
+      "Lavanda"
+    ],
+    "heartNotes": [
+      "Especiarias",
+      "Ervas"
+    ],
+    "baseNotes": [
+      "Cedro",
+      "Âmbar"
+    ],
+    "description": "Animale é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": true,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/animale-1.jpg"
+    ]
+  },
+  {
+    "slug": "ansaam",
+    "name": "Ansaam",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 260.0,
+    "stock": 1,
+    "family": "Floral oriental",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Ansaam é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": true,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/ansaam-1.jpg"
+    ]
+  },
+  {
+    "slug": "asad",
+    "name": "Asad",
+    "brand": "Lattafa",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 270.0,
+    "stock": 2,
+    "family": "Oriental especiado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Asad é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental especiado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": true,
+    "bestSeller": true,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/asad-1.jpg"
+    ]
+  },
+  {
+    "slug": "asad-bourbon",
+    "name": "Asad Bourbon",
+    "brand": "Lattafa",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 320.0,
+    "stock": 2,
+    "family": "Oriental especiado ambarado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Asad Bourbon é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental especiado ambarado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": true,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/asad-bourbon-1.jpg"
+    ]
+  },
+  {
+    "slug": "asad-zanzibar",
+    "name": "Asad Zanzibar",
+    "brand": "Lattafa",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 250.0,
+    "stock": 1,
+    "family": "Aromático aquático",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Bergamota",
+      "Lavanda"
+    ],
+    "heartNotes": [
+      "Especiarias",
+      "Ervas"
+    ],
+    "baseNotes": [
+      "Cedro",
+      "Âmbar"
+    ],
+    "description": "Asad Zanzibar é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático aquático e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/asad-zanzibar-1.jpg"
+    ]
+  },
+  {
+    "slug": "atheeri",
+    "name": "Atheeri",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 580.0,
+    "stock": 2,
+    "family": "Oriental doce",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Atheeri é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental doce e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/atheeri-1.jpg"
+    ]
+  },
+  {
+    "slug": "badee-amethist",
+    "name": "Badee Amethist",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 230.0,
+    "stock": 1,
+    "family": "Oriental floral oud",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Badee Amethist é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental floral oud e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/badee-amethist-1.jpg"
+    ]
+  },
+  {
+    "slug": "badee-blush",
+    "name": "Badee Blush",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 230.0,
+    "stock": 1,
+    "family": "Floral gourmand lactônico",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Badee Blush é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral gourmand lactônico e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/badee-blush-1.jpg"
+    ]
+  },
+  {
+    "slug": "badee-glory",
+    "name": "Badee Glory",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 220.0,
+    "stock": 1,
+    "family": "Oriental oud",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Badee Glory é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental oud e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/badee-glory-1.jpg"
+    ]
+  },
+  {
+    "slug": "badee-honor",
+    "name": "Badee Honor",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 230.0,
+    "stock": 1,
+    "family": "Gourmand especiado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Badee Honor é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand especiado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/badee-honor-1.jpg"
+    ]
+  },
+  {
+    "slug": "badee-sublime",
+    "name": "Badee Sublime",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 260.0,
+    "stock": 1,
+    "family": "Frutado amadeirado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Notas doces"
+    ],
+    "baseNotes": [
+      "Almíscar",
+      "Madeiras"
+    ],
+    "description": "Badee Sublime é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/badee-sublime-1.jpg"
+    ]
+  },
+  {
+    "slug": "creme-fino-cabelo",
+    "name": "Creme Fino Cabelo",
+    "brand": "Fino",
+    "gender": "Unissex",
+    "volume": "Máscara capilar",
+    "price": 160.0,
+    "stock": 1,
+    "family": "Tratamento capilar",
+    "longevity": "Uso capilar",
+    "projection": "Não aplicável",
+    "occasions": [
+      "Tratamento capilar"
+    ],
+    "topNotes": [
+      "Acorde cosmético"
+    ],
+    "heartNotes": [
+      "Creme nutritivo"
+    ],
+    "baseNotes": [
+      "Maciez",
+      "Brilho"
+    ],
+    "description": "Creme Fino Cabelo é um tratamento capilar selecionado para hidratação, maciez e brilho dos fios.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/creme-fino-cabelo-1.jpg"
+    ]
+  },
+  {
+    "slug": "fakhar-gold",
+    "name": "Fakhar Gold",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 230.0,
+    "stock": null,
+    "family": "Floral ambarado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "Jasmim"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Almíscar"
+    ],
+    "description": "Fakhar Gold é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral ambarado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/fakhar-gold-1.jpg"
+    ]
+  },
+  {
+    "slug": "fakhar-preto",
+    "name": "Fakhar (Preto)",
+    "brand": "Lattafa",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 270.0,
+    "stock": 1,
+    "family": "Aromático amadeirado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Bergamota",
+      "Lavanda"
+    ],
+    "heartNotes": [
+      "Especiarias",
+      "Ervas"
+    ],
+    "baseNotes": [
+      "Cedro",
+      "Âmbar"
+    ],
+    "description": "Fakhar (Preto) é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/fakhar-preto-1.jpg"
+    ]
+  },
+  {
+    "slug": "fakhar-rose",
+    "name": "Fakhar Rose",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 330.0,
+    "stock": 2,
+    "family": "Floral branco frutado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "Jasmim"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Almíscar"
+    ],
+    "description": "Fakhar Rose é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral branco frutado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/fakhar-rose-1.jpg"
+    ]
+  },
+  {
+    "slug": "fantasy",
+    "name": "Fantasy",
+    "brand": "Britney Spears",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 290.0,
+    "stock": 1,
+    "family": "Floral frutado gourmand",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Fantasy é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado gourmand e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/fantasy-1.jpg"
+    ]
+  },
+  {
+    "slug": "his-confession",
+    "name": "His Confession",
+    "brand": "Lattafa",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 320.0,
+    "stock": 1,
+    "family": "Oriental amadeirado especiado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "His Confession é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental amadeirado especiado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": true,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/his-confession-1.jpg"
+    ]
+  },
+  {
+    "slug": "khamrah",
+    "name": "Khamrah",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 240.0,
+    "stock": 1,
+    "family": "Oriental gourmand",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Khamrah é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental gourmand e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": true,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/khamrah-1.jpg"
+    ]
+  },
+  {
+    "slug": "khamrah-dukhan",
+    "name": "Khamrah Dukhan",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 240.0,
+    "stock": 1,
+    "family": "Oriental especiado defumado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Khamrah Dukhan é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental especiado defumado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": true,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/khamrah-dukhan-1.jpg"
+    ]
+  },
+  {
+    "slug": "mayar-cherry",
+    "name": "Mayar Cherry",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 240.0,
+    "stock": 1,
+    "family": "Frutado floral",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "Jasmim"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Almíscar"
+    ],
+    "description": "Mayar Cherry é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado floral e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/mayar-cherry-1.jpg"
+    ]
+  },
+  {
+    "slug": "mayar-lata-rosa",
+    "name": "Mayar Lata Rosa",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 240.0,
+    "stock": 1,
+    "family": "Floral frutado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "Jasmim"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Almíscar"
+    ],
+    "description": "Mayar Lata Rosa é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/mayar-lata-rosa-1.jpg"
+    ]
+  },
+  {
+    "slug": "musk-is-great",
+    "name": "Musk Is Great",
+    "brand": "Musk",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 180.0,
+    "stock": 1,
+    "family": "Almiscarado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Notas limpas"
+    ],
+    "heartNotes": [
+      "Flores suaves"
+    ],
+    "baseNotes": [
+      "Almíscar",
+      "Âmbar"
+    ],
+    "description": "Musk Is Great é uma fragrância selecionada da curadoria Dubai Essence, com perfil almiscarado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/musk-is-great-1.jpg"
+    ]
+  },
+  {
+    "slug": "musamam",
+    "name": "Musamam",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 540.0,
+    "stock": 1,
+    "family": "Oriental amadeirado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Musamam é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/musamam-1.jpg"
+    ]
+  },
+  {
+    "slug": "nawal",
+    "name": "Nawal",
+    "brand": "Naseem",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 150.0,
+    "stock": 1,
+    "family": "Almiscarado oriental",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Nawal é uma fragrância selecionada da curadoria Dubai Essence, com perfil almiscarado oriental e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/nawal-1.jpg"
+    ]
+  },
+  {
+    "slug": "nebras",
+    "name": "Nebras",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 290.0,
+    "stock": 1,
+    "family": "Gourmand baunilhado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Nebras é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand baunilhado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/nebras-1.jpg"
+    ]
+  },
+  {
+    "slug": "nebras-elixir",
+    "name": "Nebras Elixir",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 360.0,
+    "stock": 1,
+    "family": "Gourmand floral",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Nebras Elixir é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand floral e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": true,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/nebras-elixir-1.jpg"
+    ]
+  },
+  {
+    "slug": "odyssey-candee",
+    "name": "Odyssey Candee",
+    "brand": "Armaf",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 290.0,
+    "stock": 2,
+    "family": "Floral frutado gourmand",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Odyssey Candee é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado gourmand e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/odyssey-candee-1.jpg"
+    ]
+  },
+  {
+    "slug": "odyssey-pinkpop",
+    "name": "Odyssey Pinkpop",
+    "brand": "Armaf",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 360.0,
+    "stock": 1,
+    "family": "Frutado doce",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Notas doces"
+    ],
+    "baseNotes": [
+      "Almíscar",
+      "Madeiras"
+    ],
+    "description": "Odyssey Pinkpop é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado doce e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/odyssey-pinkpop-1.jpg"
+    ]
+  },
+  {
+    "slug": "queen-of-arabia",
+    "name": "Queen of Arábia",
+    "brand": "Queen of Arabia",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 580.0,
+    "stock": 1,
+    "family": "Oriental floral",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Queen of Arábia é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental floral e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/queen-of-arabia-1.jpg"
+    ]
+  },
+  {
+    "slug": "redcherry",
+    "name": "Redcherry",
+    "brand": "Red Cherry",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 180.0,
+    "stock": 1,
+    "family": "Frutado cereja",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Notas doces"
+    ],
+    "baseNotes": [
+      "Almíscar",
+      "Madeiras"
+    ],
+    "description": "Redcherry é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado cereja e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/redcherry-1.jpg"
+    ]
+  },
+  {
+    "slug": "sabah-delilah",
+    "name": "Sabah Delilah",
+    "brand": "Delilah",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 320.0,
+    "stock": 1,
+    "family": "Floral oriental",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Sabah Delilah é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/sabah-delilah-1.jpg"
+    ]
+  },
+  {
+    "slug": "salvo",
+    "name": "Salvo",
+    "brand": "Maison Alhambra",
+    "gender": "Masculino",
+    "volume": "100 ml",
+    "price": 280.0,
+    "stock": 1,
+    "family": "Aromático fresco",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Bergamota",
+      "Lavanda"
+    ],
+    "heartNotes": [
+      "Especiarias",
+      "Ervas"
+    ],
+    "baseNotes": [
+      "Cedro",
+      "Âmbar"
+    ],
+    "description": "Salvo é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático fresco e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/salvo-1.jpg"
+    ]
+  },
+  {
+    "slug": "shakira-elixir",
+    "name": "Shakira Elixir",
+    "brand": "Shakira",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 240.0,
+    "stock": 1,
+    "family": "Floral oriental",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Especiarias",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Âmbar"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Madeiras",
+      "Almíscar"
+    ],
+    "description": "Shakira Elixir é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/shakira-elixir-1.jpg"
+    ]
+  },
+  {
+    "slug": "teriaq",
+    "name": "Teriaq",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 290.0,
+    "stock": 1,
+    "family": "Couro gourmand especiado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Teriaq é uma fragrância selecionada da curadoria Dubai Essence, com perfil couro gourmand especiado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/teriaq-1.jpg"
+    ]
+  },
+  {
+    "slug": "tharwah",
+    "name": "Tharwah",
+    "brand": "Lattafa",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 540.0,
+    "stock": 1,
+    "family": "Floral ambarado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "Jasmim"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Almíscar"
+    ],
+    "description": "Tharwah é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral ambarado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/tharwah-1.jpg"
+    ]
+  },
+  {
+    "slug": "tiramisu",
+    "name": "Tiramisu",
+    "brand": "Paris Corner",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 270.0,
+    "stock": 3,
+    "family": "Gourmand doce",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Tiramisu é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand doce e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": true,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/tiramisu-1.jpg"
+    ]
+  },
+  {
+    "slug": "tiramisu-coco",
+    "name": "Tiramisu Coco",
+    "brand": "Paris Corner",
+    "gender": "Unissex",
+    "volume": "100 ml",
+    "price": 270.0,
+    "stock": 1,
+    "family": "Gourmand coco",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Tiramisu Coco é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand coco e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/tiramisu-coco-1.jpg"
+    ]
+  },
+  {
+    "slug": "victoria",
+    "name": "Victoria",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 270.0,
+    "stock": 2,
+    "family": "Floral gourmand",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Victoria é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral gourmand e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/victoria-1.jpg"
+    ]
+  },
+  {
+    "slug": "yara-candy",
+    "name": "Yara Candy",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 250.0,
+    "stock": 1,
+    "family": "Frutado gourmand doce",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Yara Candy é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado gourmand doce e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/yara-candy-1.jpg"
+    ]
+  },
+  {
+    "slug": "yara-elixir",
+    "name": "Yara Elixir",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 298.0,
+    "stock": 2,
+    "family": "Gourmand floral",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Açúcar",
+      "Especiarias"
+    ],
+    "heartNotes": [
+      "Pralinê",
+      "Flores"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Âmbar",
+      "Almíscar"
+    ],
+    "description": "Yara Elixir é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand floral e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": true,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/yara-elixir-1.jpg"
+    ]
+  },
+  {
+    "slug": "yara-moi",
+    "name": "Yara Moi",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 220.0,
+    "stock": 1,
+    "family": "Floral frutado cremoso",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Rosa",
+      "Jasmim"
+    ],
+    "baseNotes": [
+      "Baunilha",
+      "Almíscar"
+    ],
+    "description": "Yara Moi é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado cremoso e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/yara-moi-1.jpg"
+    ]
+  },
+  {
+    "slug": "yara-tous",
+    "name": "Yara Tous",
+    "brand": "Lattafa",
+    "gender": "Feminino",
+    "volume": "100 ml",
+    "price": 195.0,
+    "stock": 1,
+    "family": "Tropical frutado",
+    "longevity": "Alta fixação",
+    "projection": "Moderada",
+    "occasions": [
+      "Dia a dia",
+      "Ocasiões especiais"
+    ],
+    "topNotes": [
+      "Frutas",
+      "Cítricos"
+    ],
+    "heartNotes": [
+      "Flores",
+      "Notas doces"
+    ],
+    "baseNotes": [
+      "Almíscar",
+      "Madeiras"
+    ],
+    "description": "Yara Tous é uma fragrância selecionada da curadoria Dubai Essence, com perfil tropical frutado e proposta elegante para quem busca presença e personalidade.",
+    "tags": [
+      "Catálogo",
+      "Dubai Essence"
+    ],
+    "featured": false,
+    "bestSeller": false,
+    "launch": false,
+    "colors": [
+      "#efe0c5",
+      "#c69a3d",
+      "#f8efd8"
+    ],
+    "rating": 5,
+    "reviews": 0,
+    "images": [
+      "/products/yara-tous-1.jpg"
+    ]
+  }
 ];
-
-const instagramVisibleSlugs = new Set([
-  // Ordem comercial: His Confession primeiro; depois mais buscados/famosos.
-  'lattafa-his-confession',
-  'lattafa-khamrah',
-  'lattafa-asad-bourbon',
-  'armaf-club-de-nuit-untold',
-  'dior-sauvage-parfum',
-  'dolce-gabbana-light-blue',
-  'lattafa-khamrah-qahwa',
-  'lattafa-eclaire',
-  'lattafa-badee-al-oud-honor-glory',
-  'lattafa-qaed-al-fursan',
-  'sabrina-carpenter-sweet-tooth',
-  'britney-spears-fantasy',
-  'lattafa-teriaq',
-  'lattafa-angham',
-  'lattafa-asad-zanzibar',
-  'lattafa-atlas',
-  'lattafa-opulent-dubai',
-  'lattafa-badee-al-oud-sublime',
-  'lattafa-badee-al-oud-noble-blush',
-  'lattafa-fakhar-rose',
-  'lattafa-qaed-al-fursan-unlimited',
-  'lattafa-rave-now',
-  'lattafa-ameer-al-oudh-intense-oud',
-  'al-wataniah-sabah-al-ward',
-  'givenchy-linterdit-rouge'
-]);
-
-export const products: Product[] = allProducts
-  .filter((product) => instagramVisibleSlugs.has(product.slug))
-  .sort((a, b) => Array.from(instagramVisibleSlugs).indexOf(a.slug) - Array.from(instagramVisibleSlugs).indexOf(b.slug));
-
-const productImages: Record<string, string[]> = {
-  'lattafa-asad-bourbon': ['/products/lattafa-asad-bourbon-1.jpg','/products/lattafa-asad-bourbon-2.jpg','/products/lattafa-asad-bourbon-3.jpg'],
-  'lattafa-khamrah': ['/products/lattafa-khamrah-1.jpg','/products/lattafa-khamrah-2.jpg','/products/lattafa-khamrah-3.jpg'],
-  'lattafa-yara': ['/products/lattafa-yara-1.jpg','/products/lattafa-yara-2.png','/products/lattafa-yara-3.jpg'],
-  'lattafa-eclaire': ['/products/lattafa-eclaire-1.jpg','/products/lattafa-eclaire-2.jpg','/products/lattafa-eclaire-3.png'],
-  'lattafa-opulent-dubai': ['/products/lattafa-opulent-dubai-1.jpg','/products/lattafa-opulent-dubai-2.jpg','/products/lattafa-opulent-dubai-3.jpg'],
-  'lattafa-fakhar-platin': ['/products/lattafa-fakhar-platin-1.jpg','/products/lattafa-fakhar-platin-2.jpg','/products/lattafa-fakhar-platin-3.jpg'],
-  'bidaya-maktub-la-vie': ['/products/bidaya-maktub-la-vie-1.png','/products/bidaya-maktub-la-vie-2.webp','/products/bidaya-maktub-la-vie-3.png'],
-  'bidaya-habibi-king': ['/products/bidaya-habibi-king-1.webp','/products/bidaya-habibi-king-2.webp','/products/bidaya-habibi-king-3.png'],
-  'bidaya-gris': ['/products/bidaya-gris-1.png','/products/bidaya-gris-2.png','/products/bidaya-gris-3.png'],
-  'rayhaan-elixir': ['/products/rayhaan-elixir-1.jpg','/products/rayhaan-elixir-2.jpg','/products/rayhaan-elixir-3.webp'],
-  'armaf-club-de-nuit-untold': ['/products/armaf-club-de-nuit-untold-1.jpg','/products/armaf-club-de-nuit-untold-2.jpg','/products/armaf-club-de-nuit-untold-3.jpg'],
-  'al-wataniah-sabah-al-ward': ['/products/al-wataniah-sabah-al-ward-1.jpg','/products/al-wataniah-sabah-al-ward-2.png','/products/al-wataniah-sabah-al-ward-3.png'],
-
-  'lattafa-asad-zanzibar': ['/products/lattafa-asad-zanzibar-1.png','/products/lattafa-asad-zanzibar-2.jpg','/products/lattafa-asad-zanzibar-3.jpg'],
-  'lattafa-teriaq': ['/products/lattafa-teriaq-1.jpg','/products/lattafa-teriaq-2.jpg','/products/lattafa-teriaq-3.jpg'],
-  'lattafa-angham': ['/products/lattafa-angham-1.png','/products/lattafa-angham-2.jpg','/products/lattafa-angham-3.jpg'],
-  'lattafa-yara-candy': ['/products/lattafa-yara-candy-1.jpg','/products/lattafa-yara-candy-2.jpg','/products/lattafa-yara-candy-3.jpg'],
-  'lattafa-atlas': ['/products/lattafa-atlas-1.jpg','/products/lattafa-atlas-2.jpg','/products/lattafa-atlas-3.jpg'],
-  'lattafa-badee-al-oud-sublime': ['/products/lattafa-badee-al-oud-sublime-1.jpg','/products/lattafa-badee-al-oud-sublime-2.png','/products/lattafa-badee-al-oud-sublime-3.jpg'],
-  'lattafa-badee-al-oud-honor-glory': ['/products/lattafa-badee-al-oud-honor-glory-1.jpg','/products/lattafa-badee-al-oud-honor-glory-2.jpg','/products/lattafa-badee-al-oud-honor-glory-3.jpg'],
-  'lattafa-ajayeb-dubai-portrait': ['/products/lattafa-ajayeb-dubai-portrait-1.jpg','/products/lattafa-ajayeb-dubai-portrait-2.jpg','/products/lattafa-ajayeb-dubai-portrait-3.jpg'],
-  'lattafa-fakhar-rose': ['/products/lattafa-fakhar-rose-1.jpg','/products/lattafa-fakhar-rose-2.jpg','/products/lattafa-fakhar-rose-3.jpg'],
-  'lattafa-qaed-al-fursan': ['/products/lattafa-qaed-al-fursan-1.jpg','/products/lattafa-qaed-al-fursan-2.jpg','/products/lattafa-qaed-al-fursan-3.jpg'],
-  'lattafa-qaed-al-fursan-unlimited': ['/products/lattafa-qaed-al-fursan-unlimited-1.jpg','/products/lattafa-qaed-al-fursan-unlimited-2.jpg','/products/lattafa-qaed-al-fursan-unlimited-3.jpg'],
-  'lattafa-khamrah-qahwa': ['/products/lattafa-khamrah-qahwa-1.jpg','/products/lattafa-khamrah-qahwa-2.jpg','/products/lattafa-khamrah-qahwa-3.jpg'],
-  'lattafa-ana-abiyedh-rouge': ['/products/lattafa-ana-abiyedh-rouge-1.png','/products/lattafa-ana-abiyedh-rouge-2.png','/products/lattafa-ana-abiyedh-rouge-3.png'],
-  'lattafa-nebras': ['/products/lattafa-nebras-1.jpg','/products/lattafa-nebras-2.jpg','/products/lattafa-nebras-3.jpg'],
-  'lattafa-sehr': ['/products/lattafa-sehr-1.jpg','/products/lattafa-sehr-2.jpg','/products/lattafa-sehr-3.jpg'],
-  'lattafa-al-nashama-caprice': ['/products/lattafa-al-nashama-caprice-1.jpg','/products/lattafa-al-nashama-caprice-2.jpg','/products/lattafa-al-nashama-caprice-3.jpg'],
-  'lattafa-badee-al-oud-noble-blush': ['/products/lattafa-badee-al-oud-noble-blush-1.jpg','/products/lattafa-badee-al-oud-noble-blush-2.jpg','/products/lattafa-badee-al-oud-noble-blush-3.jpg'],
-  'lattafa-rave-now': ['/products/lattafa-rave-now-1.jpg','/products/lattafa-rave-now-2.jpg','/products/lattafa-rave-now-3.jpg'],
-  'lattafa-ameer-al-oudh-intense-oud': ['/products/lattafa-ameer-al-oudh-intense-oud-1.png','/products/lattafa-ameer-al-oudh-intense-oud-2.jpg','/products/lattafa-ameer-al-oudh-intense-oud-3.jpg'],
-  'lattafa-haya': ['/products/lattafa-haya-1.jpg','/products/lattafa-haya-2.jpg','/products/lattafa-haya-3.jpg'],
-  'dior-sauvage-parfum': ['/products/dior-sauvage-parfum-1.jpg','/products/dior-sauvage-parfum-2.png','/products/dior-sauvage-parfum-3.webp'],
-  'dolce-gabbana-light-blue': ['/products/dolce-gabbana-light-blue-1.jpg','/products/dolce-gabbana-light-blue-2.jpg','/products/dolce-gabbana-light-blue-3.webp'],
-  'sabrina-carpenter-sweet-tooth': ['/products/sabrina-carpenter-sweet-tooth-1.jpg','/products/sabrina-carpenter-sweet-tooth-2.jpg','/products/sabrina-carpenter-sweet-tooth-3.jpg'],
-  'sabrina-carpenter-sweet-tooth-caramel-dream': ['/products/sabrina-carpenter-sweet-tooth-caramel-dream-1.jpg','/products/sabrina-carpenter-sweet-tooth-caramel-dream-2.png','/products/sabrina-carpenter-sweet-tooth-caramel-dream-3.jpg'],
-  'britney-spears-fantasy': ['/products/britney-spears-fantasy-1.jpg','/products/britney-spears-fantasy-2.png','/products/britney-spears-fantasy-3.jpg'],
-  'givenchy-linterdit-rouge': ['/products/givenchy-linterdit-rouge-1.jpg','/products/givenchy-linterdit-rouge-2.jpg','/products/givenchy-linterdit-rouge-3.jpg'],
-  'lattafa-his-confession': ['/products/lattafa-his-confession-1.jpg','/products/lattafa-his-confession-2.jpg','/products/lattafa-his-confession-3.jpg'],
-};
-products.forEach((product) => { product.images = (productImages[product.slug] ?? []).slice(0, 1); });
-
 export const brands = Array.from(new Set(products.map(p=>p.brand))).sort();
 export const money = (v:number)=> v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 export const whatsappLink = (name:string)=>`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá! Vim pelo site da Dubai Essence e tenho interesse no perfume: ${name}`)}`;

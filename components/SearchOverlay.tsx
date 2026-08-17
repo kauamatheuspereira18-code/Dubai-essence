@@ -12,7 +12,6 @@ const searchableProducts = products.map((product) => ({
   baseNotes: product.baseNotes,
   image: product.images?.[0] ?? '',
   price: money(product.price),
-  pixPrice: money(product.pixPrice),
 }));
 
 export function SearchOverlay() {
@@ -180,7 +179,7 @@ export function SearchOverlay() {
 
       var price = document.createElement('div');
       price.className = 'hidden text-right md:block';
-      price.innerHTML = '<p class="text-sm font-bold text-coffee">' + product.price + '</p><p class="mt-1 text-xs font-semibold text-oldgold">' + product.pixPrice + ' via Pix</p>';
+      price.innerHTML = '<p class="text-sm font-bold text-coffee">' + product.price + '</p>';
 
       item.appendChild(imageWrap); item.appendChild(info); item.appendChild(price);
       suggestionsBox.appendChild(item);

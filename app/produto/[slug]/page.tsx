@@ -42,8 +42,7 @@ export default async function Produto({ params }: { params: Promise<{ slug: stri
                 {p.oldPrice && <span className="text-coffee/35 line-through">{money(p.oldPrice)}</span>}
                 <span className="text-4xl font-bold text-coffee">{money(p.price)}</span>
               </div>
-              <p className="mt-1 text-lg font-bold text-oldgold">{money(p.pixPrice)} via Pix</p>
-              <p className="text-sm text-coffee/60">ou consulte parcelamento diretamente no atendimento.</p>
+              <p className="text-sm text-coffee/60">Consulte condições de pagamento diretamente no atendimento.</p>
 
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <div className="rounded-2xl bg-desert/70 p-4"><b>Estoque</b><p>{p.stock} unidades disponíveis</p></div>

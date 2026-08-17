@@ -6,7 +6,7 @@ import { SearchOverlay } from './SearchOverlay';
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/25 bg-pearl/95 shadow-sm backdrop-blur">
-      <div className="bg-gold/15 px-4 py-2 text-center text-[11px] font-semibold uppercase tracking-[.18em] text-oldgold">
+      <div className="bg-gold/15 px-2 py-2 text-center text-[9px] font-semibold uppercase tracking-[.12em] text-oldgold sm:px-4 sm:text-[11px] sm:tracking-[.18em]">
         Perfumes originais • Atendimento pelo WhatsApp • SJP / CWB / Itapoá SC
       </div>
 
@@ -23,7 +23,6 @@ export function Header() {
           <SearchOverlay />
           <Link href="/favoritos" className="hidden md:block" aria-label="Favoritos"><Heart size={20} /></Link>
           <Link href="/carrinho" className="hidden md:block" aria-label="Carrinho"><ShoppingBag size={20} /></Link>
-          <Link href="/cadastro" className="hidden rounded-full border border-gold/40 px-4 py-2 text-sm font-semibold text-oldgold md:block">Cadastrar</Link>
         </div>
       </div>
     </header>
