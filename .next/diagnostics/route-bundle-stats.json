@@ -1,10 +1,10 @@
 [
   {
     "route": "/",
-    "firstLoadUncompressedJsBytes": 516432,
+    "firstLoadUncompressedJsBytes": 515338,
     "firstLoadChunkPaths": [
       ".next/static/chunks/44p_g4s4p6ckz.js",
-      ".next/static/chunks/3vk4-vjgw657y.js",
+      ".next/static/chunks/2jeyjvs2w4oid.js",
       ".next/static/chunks/3s6nzrbk-8mnv.js",
       ".next/static/chunks/19mx3mg6lkumu.js",
       ".next/static/chunks/4561u0v7ysn3r.js",
@@ -14,10 +14,10 @@
   },
   {
     "route": "/favoritos",
-    "firstLoadUncompressedJsBytes": 516432,
+    "firstLoadUncompressedJsBytes": 515338,
     "firstLoadChunkPaths": [
       ".next/static/chunks/44p_g4s4p6ckz.js",
-      ".next/static/chunks/3vk4-vjgw657y.js",
+      ".next/static/chunks/2jeyjvs2w4oid.js",
       ".next/static/chunks/3s6nzrbk-8mnv.js",
       ".next/static/chunks/19mx3mg6lkumu.js",
       ".next/static/chunks/4561u0v7ysn3r.js",
@@ -27,10 +27,10 @@
   },
   {
     "route": "/loja",
-    "firstLoadUncompressedJsBytes": 516432,
+    "firstLoadUncompressedJsBytes": 515338,
     "firstLoadChunkPaths": [
       ".next/static/chunks/44p_g4s4p6ckz.js",
-      ".next/static/chunks/3vk4-vjgw657y.js",
+      ".next/static/chunks/2jeyjvs2w4oid.js",
       ".next/static/chunks/3s6nzrbk-8mnv.js",
       ".next/static/chunks/19mx3mg6lkumu.js",
       ".next/static/chunks/4561u0v7ysn3r.js",
@@ -40,10 +40,10 @@
   },
   {
     "route": "/produto/[slug]",
-    "firstLoadUncompressedJsBytes": 516432,
+    "firstLoadUncompressedJsBytes": 515338,
     "firstLoadChunkPaths": [
       ".next/static/chunks/44p_g4s4p6ckz.js",
-      ".next/static/chunks/3vk4-vjgw657y.js",
+      ".next/static/chunks/2jeyjvs2w4oid.js",
       ".next/static/chunks/3s6nzrbk-8mnv.js",
       ".next/static/chunks/19mx3mg6lkumu.js",
       ".next/static/chunks/4561u0v7ysn3r.js",
@@ -53,10 +53,10 @@
   },
   {
     "route": "/carrinho",
-    "firstLoadUncompressedJsBytes": 511274,
+    "firstLoadUncompressedJsBytes": 509618,
     "firstLoadChunkPaths": [
       ".next/static/chunks/44p_g4s4p6ckz.js",
-      ".next/static/chunks/2pa4mxz6zfk6-.js",
+      ".next/static/chunks/0vlsbnv0s27tl.js",
       ".next/static/chunks/3s6nzrbk-8mnv.js",
       ".next/static/chunks/19mx3mg6lkumu.js",
       ".next/static/chunks/4561u0v7ysn3r.js",

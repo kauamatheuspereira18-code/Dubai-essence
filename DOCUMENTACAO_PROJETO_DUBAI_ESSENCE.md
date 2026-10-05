@@ -1,8 +1,8 @@
-# Dubai Essence — Documentação do Projeto
+# Dubai em Essence — Documentação do Projeto
 
 ## 1. Visão geral
 
-A **Dubai Essence** é uma loja virtual premium criada inicialmente para perfumes árabes, mas evoluída durante o desenvolvimento para contemplar também alguns perfumes/importados que aparecem nos prints do Instagram da loja.
+A **Dubai em Essence** é uma loja virtual premium criada inicialmente para perfumes árabes, mas evoluída durante o desenvolvimento para contemplar também alguns perfumes/importados que aparecem nos prints do Instagram da loja.
 
 O objetivo do projeto é transmitir:
 
@@ -21,7 +21,7 @@ A loja foi desenvolvida com identidade própria, usando como referência apenas 
 
 ### Nome
 
-**Dubai Essence**
+**Dubai em Essence**
 
 ### Logo
 
@@ -67,9 +67,7 @@ https://wa.me/5541997095511
 
 ### Região de atendimento
 
-- SJP
-- CWB
-- Itapoá SC
+- São José dos Pinhais
 
 ### E-mail
 
@@ -261,7 +259,7 @@ A página Loja foi ajustada para remover o bloco grande que o cliente não gosto
 Foi removido o bloco com textos como:
 
 - “Catálogo congelado”;
-- “Vitrine Dubai Essence”;
+- “Vitrine Dubai em Essence”;
 - texto grande explicativo;
 - card grande de atendimento oficial.
 
@@ -391,18 +389,18 @@ Importante:
 
 A compra principal é feita via WhatsApp.
 
-Ao clicar em Comprar, o cliente é direcionado para o WhatsApp da Dubai Essence com mensagem automática.
+Ao clicar em Comprar, o cliente é direcionado para o WhatsApp da Dubai em Essence com mensagem automática.
 
 Formato da mensagem:
 
 ```txt
-Olá! Vim pelo site da Dubai Essence e tenho interesse no perfume: [NOME DO PERFUME]
+Olá! Vim pelo site da Dubai em Essence e tenho interesse no perfume: [NOME DO PERFUME]
 ```
 
 Exemplo:
 
 ```txt
-Olá! Vim pelo site da Dubai Essence e tenho interesse no perfume: His Confession
+Olá! Vim pelo site da Dubai em Essence e tenho interesse no perfume: His Confession
 ```
 
 ---

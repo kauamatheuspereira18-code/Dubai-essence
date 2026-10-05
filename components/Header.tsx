@@ -7,15 +7,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/25 bg-pearl/95 shadow-sm backdrop-blur">
       <div className="bg-gold/15 px-2 py-2 text-center text-[9px] font-semibold uppercase tracking-[.12em] text-oldgold sm:px-4 sm:text-[11px] sm:tracking-[.18em]">
-        Perfumes originais • Atendimento pelo WhatsApp • SJP / CWB / Itapoá SC
+        Perfumes originais • Atendimento pelo WhatsApp • São José dos Pinhais
       </div>
 
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4">
-        <Link href="/" className="flex shrink-0 items-center gap-3">
-          <Image src="/logo.png" alt="Dubai Essence" width={58} height={58} className="rounded-full ring-1 ring-gold/40" />
+        <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Dubai em Essence — início">
+          <Image src="/logo.png" alt="Dubai em Essence" width={58} height={58} className="rounded-full ring-1 ring-gold/40" />
           <div className="hidden sm:block">
             <p className="font-serif text-xl tracking-[.18em] gold-text">DUBAI</p>
-            <p className="-mt-1 text-[10px] tracking-[.38em] text-oldgold">ESSENCE</p>
+            <p className="-mt-1 text-[9px] tracking-[.28em] text-oldgold">EM ESSENCE</p>
           </div>
         </Link>
 

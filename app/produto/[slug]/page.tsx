@@ -57,8 +57,8 @@ export default async function Produto({ params }: { params: Promise<{ slug: stri
 
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               <Trust icon={<ShieldCheck />} title="Original" text="Produto autêntico" />
-              <Trust icon={<Truck />} title="Entrega" text="SJP/CWB/SC" />
-              <Trust icon={<Sparkles />} title="Curadoria" text="Dubai Essence" />
+              <Trust icon={<Truck />} title="Entrega" text="São José dos Pinhais" />
+              <Trust icon={<Sparkles />} title="Curadoria" text="Dubai em Essence" />
             </div>
           </div>
         </div>

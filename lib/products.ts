@@ -31,10 +31,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Alnoble é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Alnoble é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental amadeirado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": true,
     "bestSeller": false,
@@ -78,10 +78,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Ameeri é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental oud e proposta elegante para quem busca presença e personalidade.",
+    "description": "Ameeri é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental oud e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": true,
     "bestSeller": false,
@@ -94,7 +94,7 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/ameeri-1.jpg"
+      "/products/ameeri-1.png"
     ]
   },
   {
@@ -125,10 +125,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Amerati é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "description": "Amerati é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": true,
     "bestSeller": false,
@@ -171,10 +171,10 @@ export const products: Product[] = [
       "Cedro",
       "Âmbar"
     ],
-    "description": "Animale é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Animale é uma fragrância selecionada da curadoria Dubai em Essence, com perfil aromático amadeirado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": true,
     "bestSeller": false,
@@ -218,10 +218,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Ansaam é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "description": "Ansaam é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": true,
     "bestSeller": false,
@@ -265,10 +265,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Asad é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental especiado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Asad é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental especiado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": true,
     "bestSeller": true,
@@ -312,10 +312,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Asad Bourbon é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental especiado ambarado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Asad Bourbon é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental especiado ambarado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": true,
@@ -358,10 +358,10 @@ export const products: Product[] = [
       "Cedro",
       "Âmbar"
     ],
-    "description": "Asad Zanzibar é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático aquático e proposta elegante para quem busca presença e personalidade.",
+    "description": "Asad Zanzibar é uma fragrância selecionada da curadoria Dubai em Essence, com perfil aromático aquático e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -405,10 +405,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Atheeri é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental doce e proposta elegante para quem busca presença e personalidade.",
+    "description": "Atheeri é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental doce e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -452,10 +452,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Badee Amethist é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental floral oud e proposta elegante para quem busca presença e personalidade.",
+    "description": "Badee Amethist é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental floral oud e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -499,10 +499,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Badee Blush é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral gourmand lactônico e proposta elegante para quem busca presença e personalidade.",
+    "description": "Badee Blush é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral gourmand lactônico e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -546,10 +546,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Badee Glory é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental oud e proposta elegante para quem busca presença e personalidade.",
+    "description": "Badee Glory é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental oud e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -593,10 +593,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Badee Honor é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand especiado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Badee Honor é uma fragrância selecionada da curadoria Dubai em Essence, com perfil gourmand especiado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -639,10 +639,10 @@ export const products: Product[] = [
       "Almíscar",
       "Madeiras"
     ],
-    "description": "Badee Sublime é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Badee Sublime é uma fragrância selecionada da curadoria Dubai em Essence, com perfil frutado amadeirado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -685,7 +685,7 @@ export const products: Product[] = [
     "description": "Creme Fino Cabelo é um tratamento capilar selecionado para hidratação, maciez e brilho dos fios.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -728,10 +728,10 @@ export const products: Product[] = [
       "Baunilha",
       "Almíscar"
     ],
-    "description": "Fakhar Gold é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral ambarado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Fakhar Gold é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral ambarado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -744,12 +744,12 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/fakhar-gold-1.jpg"
+      "/products/fakhar-gold-1.png"
     ]
   },
   {
     "slug": "fakhar-preto",
-    "name": "Fakhar (Preto)",
+    "name": "Fakhar black",
     "brand": "Lattafa",
     "gender": "Masculino",
     "volume": "100 ml",
@@ -774,10 +774,10 @@ export const products: Product[] = [
       "Cedro",
       "Âmbar"
     ],
-    "description": "Fakhar (Preto) é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Fakhar black é uma fragrância selecionada da curadoria Dubai em Essence, com perfil aromático amadeirado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -790,7 +790,7 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/fakhar-preto-1.jpg"
+      "/products/fakhar-preto-1.png"
     ]
   },
   {
@@ -820,10 +820,10 @@ export const products: Product[] = [
       "Baunilha",
       "Almíscar"
     ],
-    "description": "Fakhar Rose é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral branco frutado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Fakhar Rose é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral branco frutado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -836,7 +836,7 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/fakhar-rose-1.jpg"
+      "/products/fakhar-rose-1.png"
     ]
   },
   {
@@ -867,10 +867,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Fantasy é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado gourmand e proposta elegante para quem busca presença e personalidade.",
+    "description": "Fantasy é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral frutado gourmand e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -914,10 +914,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "His Confession é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental amadeirado especiado e proposta elegante para quem busca presença e personalidade.",
+    "description": "His Confession é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental amadeirado especiado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": true,
@@ -961,10 +961,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Khamrah é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental gourmand e proposta elegante para quem busca presença e personalidade.",
+    "description": "Khamrah é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental gourmand e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": true,
@@ -1008,10 +1008,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Khamrah Dukhan é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental especiado defumado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Khamrah Dukhan é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental especiado defumado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1029,7 +1029,7 @@ export const products: Product[] = [
   },
   {
     "slug": "mayar-cherry",
-    "name": "Mayar Cherry",
+    "name": "Mayar Cherry Intense",
     "brand": "Lattafa",
     "gender": "Feminino",
     "volume": "100 ml",
@@ -1054,10 +1054,10 @@ export const products: Product[] = [
       "Baunilha",
       "Almíscar"
     ],
-    "description": "Mayar Cherry é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado floral e proposta elegante para quem busca presença e personalidade.",
+    "description": "Mayar Cherry Intense é uma fragrância selecionada da curadoria Dubai em Essence, com perfil frutado floral e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1070,12 +1070,12 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/mayar-cherry-1.jpg"
+      "/products/mayar-cherry-1.png"
     ]
   },
   {
     "slug": "mayar-lata-rosa",
-    "name": "Mayar Lata Rosa",
+    "name": "Mayar",
     "brand": "Lattafa",
     "gender": "Feminino",
     "volume": "100 ml",
@@ -1100,10 +1100,10 @@ export const products: Product[] = [
       "Baunilha",
       "Almíscar"
     ],
-    "description": "Mayar Lata Rosa é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Mayar é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral frutado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1144,10 +1144,10 @@ export const products: Product[] = [
       "Almíscar",
       "Âmbar"
     ],
-    "description": "Musk Is Great é uma fragrância selecionada da curadoria Dubai Essence, com perfil almiscarado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Musk Is Great é uma fragrância selecionada da curadoria Dubai em Essence, com perfil almiscarado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1160,7 +1160,7 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/musk-is-great-1.jpg"
+      "/products/musk-is-great-1.png"
     ]
   },
   {
@@ -1191,10 +1191,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Musamam é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental amadeirado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Musamam é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental amadeirado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1207,13 +1207,13 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/musamam-1.jpg"
+      "/products/musamam-1.png"
     ]
   },
   {
     "slug": "nawal",
-    "name": "Nawal",
-    "brand": "Naseem",
+    "name": "Nawal Fluorite",
+    "brand": "Al Wataniah",
     "gender": "Unissex",
     "volume": "100 ml",
     "price": 150.0,
@@ -1238,10 +1238,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Nawal é uma fragrância selecionada da curadoria Dubai Essence, com perfil almiscarado oriental e proposta elegante para quem busca presença e personalidade.",
+    "description": "Nawal Fluorite é uma fragrância selecionada da curadoria Dubai em Essence, com perfil almiscarado oriental e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1254,7 +1254,7 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/nawal-1.jpg"
+      "/products/nawal-1.png"
     ]
   },
   {
@@ -1285,10 +1285,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Nebras é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand baunilhado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Nebras é uma fragrância selecionada da curadoria Dubai em Essence, com perfil gourmand baunilhado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1332,10 +1332,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Nebras Elixir é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand floral e proposta elegante para quem busca presença e personalidade.",
+    "description": "Nebras Elixir é uma fragrância selecionada da curadoria Dubai em Essence, com perfil gourmand floral e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1379,10 +1379,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Odyssey Candee é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado gourmand e proposta elegante para quem busca presença e personalidade.",
+    "description": "Odyssey Candee é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral frutado gourmand e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1425,10 +1425,10 @@ export const products: Product[] = [
       "Almíscar",
       "Madeiras"
     ],
-    "description": "Odyssey Pinkpop é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado doce e proposta elegante para quem busca presença e personalidade.",
+    "description": "Odyssey Pinkpop é uma fragrância selecionada da curadoria Dubai em Essence, com perfil frutado doce e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1441,7 +1441,7 @@ export const products: Product[] = [
     "rating": 5,
     "reviews": 0,
     "images": [
-      "/products/odyssey-pinkpop-1.jpg"
+      "/products/odyssey-pinkpop-1.png"
     ]
   },
   {
@@ -1472,10 +1472,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Queen of Arábia é uma fragrância selecionada da curadoria Dubai Essence, com perfil oriental floral e proposta elegante para quem busca presença e personalidade.",
+    "description": "Queen of Arábia é uma fragrância selecionada da curadoria Dubai em Essence, com perfil oriental floral e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1518,10 +1518,10 @@ export const products: Product[] = [
       "Almíscar",
       "Madeiras"
     ],
-    "description": "Redcherry é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado cereja e proposta elegante para quem busca presença e personalidade.",
+    "description": "Redcherry é uma fragrância selecionada da curadoria Dubai em Essence, com perfil frutado cereja e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1565,10 +1565,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Sabah Delilah é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "description": "Sabah Delilah é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1611,10 +1611,10 @@ export const products: Product[] = [
       "Cedro",
       "Âmbar"
     ],
-    "description": "Salvo é uma fragrância selecionada da curadoria Dubai Essence, com perfil aromático fresco e proposta elegante para quem busca presença e personalidade.",
+    "description": "Salvo é uma fragrância selecionada da curadoria Dubai em Essence, com perfil aromático fresco e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1658,10 +1658,10 @@ export const products: Product[] = [
       "Madeiras",
       "Almíscar"
     ],
-    "description": "Shakira Elixir é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
+    "description": "Shakira Elixir é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral oriental e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1705,10 +1705,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Teriaq é uma fragrância selecionada da curadoria Dubai Essence, com perfil couro gourmand especiado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Teriaq é uma fragrância selecionada da curadoria Dubai em Essence, com perfil couro gourmand especiado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1751,10 +1751,10 @@ export const products: Product[] = [
       "Baunilha",
       "Almíscar"
     ],
-    "description": "Tharwah é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral ambarado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Tharwah é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral ambarado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1798,10 +1798,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Tiramisu é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand doce e proposta elegante para quem busca presença e personalidade.",
+    "description": "Tiramisu é uma fragrância selecionada da curadoria Dubai em Essence, com perfil gourmand doce e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1845,10 +1845,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Tiramisu Coco é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand coco e proposta elegante para quem busca presença e personalidade.",
+    "description": "Tiramisu Coco é uma fragrância selecionada da curadoria Dubai em Essence, com perfil gourmand coco e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1892,10 +1892,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Victoria é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral gourmand e proposta elegante para quem busca presença e personalidade.",
+    "description": "Victoria é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral gourmand e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1939,10 +1939,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Yara Candy é uma fragrância selecionada da curadoria Dubai Essence, com perfil frutado gourmand doce e proposta elegante para quem busca presença e personalidade.",
+    "description": "Yara Candy é uma fragrância selecionada da curadoria Dubai em Essence, com perfil frutado gourmand doce e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -1986,10 +1986,10 @@ export const products: Product[] = [
       "Âmbar",
       "Almíscar"
     ],
-    "description": "Yara Elixir é uma fragrância selecionada da curadoria Dubai Essence, com perfil gourmand floral e proposta elegante para quem busca presença e personalidade.",
+    "description": "Yara Elixir é uma fragrância selecionada da curadoria Dubai em Essence, com perfil gourmand floral e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -2032,10 +2032,10 @@ export const products: Product[] = [
       "Baunilha",
       "Almíscar"
     ],
-    "description": "Yara Moi é uma fragrância selecionada da curadoria Dubai Essence, com perfil floral frutado cremoso e proposta elegante para quem busca presença e personalidade.",
+    "description": "Yara Moi é uma fragrância selecionada da curadoria Dubai em Essence, com perfil floral frutado cremoso e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -2078,10 +2078,10 @@ export const products: Product[] = [
       "Almíscar",
       "Madeiras"
     ],
-    "description": "Yara Tous é uma fragrância selecionada da curadoria Dubai Essence, com perfil tropical frutado e proposta elegante para quem busca presença e personalidade.",
+    "description": "Yara Tous é uma fragrância selecionada da curadoria Dubai em Essence, com perfil tropical frutado e proposta elegante para quem busca presença e personalidade.",
     "tags": [
       "Catálogo",
-      "Dubai Essence"
+      "Dubai em Essence"
     ],
     "featured": false,
     "bestSeller": false,
@@ -2100,5 +2100,5 @@ export const products: Product[] = [
 ];
 export const brands = Array.from(new Set(products.map(p=>p.brand))).sort();
 export const money = (v:number)=> v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
-export const whatsappLink = (name:string)=>`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá! Vim pelo site da Dubai Essence e tenho interesse no perfume: ${name}`)}`;
+export const whatsappLink = (name:string)=>`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá! Vim pelo site da Dubai em Essence e tenho interesse no perfume: ${name}`)}`;
 export const bySlug=(slug:string)=>products.find(p=>p.slug===slug);

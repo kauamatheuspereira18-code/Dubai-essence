@@ -24,11 +24,11 @@ export default async function Loja({ searchParams }: { searchParams?: Promise<{ 
     <section className="mx-auto max-w-7xl px-4 py-8">
       <div className="mb-6 flex flex-col justify-between gap-4 border-b border-gold/20 pb-6 md:flex-row md:items-end">
         <div>
-          <p className="text-xs uppercase tracking-[.24em] text-oldgold">Dubai Essence</p>
+          <p className="text-xs uppercase tracking-[.24em] text-oldgold">Dubai em Essence</p>
           <h1 className="font-serif text-4xl text-coffee md:text-5xl">Loja</h1>
           <p className="mt-2 max-w-2xl text-coffee/65">Escolha seu perfume e compre direto pelo WhatsApp.</p>
         </div>
-        <a href="https://wa.me/5541997095511?text=Olá! Vim pelo site da Dubai Essence e quero uma indicação de perfume." className="inline-flex w-fit items-center rounded-full border border-gold/35 px-5 py-3 text-sm font-semibold text-oldgold hover:bg-gold/10">
+        <a href="https://wa.me/5541997095511?text=Olá! Vim pelo site da Dubai em Essence e quero uma indicação de perfume." className="inline-flex w-fit items-center rounded-full border border-gold/35 px-5 py-3 text-sm font-semibold text-oldgold hover:bg-gold/10">
           <MessageCircle className="mr-2" size={16} /> Pedir indicação
         </a>
       </div>
